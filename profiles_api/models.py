@@ -25,6 +25,8 @@ class UserProfileManager(BaseUserManager):
         user.is_superuser = True
         user.is_staff = True
         user.sava(using=self._db)
+        
+        return user
 
 
 class UserProfile(AbstractBaseUser, PermissionsMixin):
